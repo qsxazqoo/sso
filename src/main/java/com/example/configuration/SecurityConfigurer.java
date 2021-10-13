@@ -46,7 +46,7 @@ public class SecurityConfigurer extends WebSecurityConfigurerAdapter {
 			.csrf().disable()
 			.sessionManagement()
 			//如果session失效，自動跳轉
-			.invalidSessionUrl("/login")
+//			.invalidSessionUrl("/login")
 			//重複登入，會踢掉前者
 			.maximumSessions(1)
 			//重複登入後導向

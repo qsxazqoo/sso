@@ -62,7 +62,7 @@ public class VerificationController {
 			cookie.setPath("/");
 			response.addCookie(cookie);
 			//是否過期及token是否正確
-		}else if(jwtTokenUtil.isTokenExpired(cookies) && jwtTokenUtil.extractAllClaims(cookies)!=null){
+		}else if(jwtTokenUtil.isTokenExpired(cookies) && jwtTokenUtil.extractAllClaims(cookies)==null){
 			System.out.println("過期");
 			return "redirect:http://127.0.0.1:8081/logout";
 		}
